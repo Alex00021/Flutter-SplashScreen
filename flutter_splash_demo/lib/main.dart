@@ -18,53 +18,53 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
-      // home: const LoginPage()
-      home: const SplashScreen()
+      home: const LoginPage()
+      // home: const SplashScreen()
 
     );
   }
 }
 
 
-class SplashScreen extends StatefulWidget {
-  const SplashScreen({Key? key}) : super(key: key);
-
-  @override
-  State<SplashScreen> createState() => _SplashScreenState();
-}
-
-class _SplashScreenState extends State<SplashScreen> {
-
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    startTime();
-  }
-
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Image.asset(
-          "assets/images/launch_image.png",
-          width: double.infinity, fit: BoxFit.cover,),
-      ),
-    );
-  }
-
-  Timer startTime() {
-    //设置启动图生效时间
-    var duration = const Duration(seconds: 5);
-    return  Timer(duration, navigationPage);
-  }
-
-  /// 倒计时结束后进入登录页
-  void navigationPage() {
-    Navigator.push(context, MaterialPageRoute(builder: (_)=>const LoginPage()));
-  }
-}
+// class SplashScreen extends StatefulWidget {
+//   const SplashScreen({Key? key}) : super(key: key);
+//
+//   @override
+//   State<SplashScreen> createState() => _SplashScreenState();
+// }
+//
+// class _SplashScreenState extends State<SplashScreen> {
+//
+//   @override
+//   void initState() {
+//     // TODO: implement initState
+//     super.initState();
+//     startTime();
+//   }
+//
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       body: Center(
+//         child: Image.asset(
+//           "assets/images/launch_image.png",
+//           width: double.infinity, fit: BoxFit.cover,),
+//       ),
+//     );
+//   }
+//
+//   Timer startTime() {
+//     //设置启动图生效时间
+//     var duration = const Duration(seconds: 5);
+//     return  Timer(duration, navigationPage);
+//   }
+//
+//   /// 倒计时结束后进入登录页
+//   void navigationPage() {
+//     Navigator.push(context, MaterialPageRoute(builder: (_)=>const LoginPage()));
+//   }
+// }
 
 
 
